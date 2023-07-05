@@ -1,0 +1,52 @@
+<link href="air.cdf" rel="stylesheet">
+<HTML><HEAD><TITLE>Home page</TITLE>
+<script language=javascript>
+function sub()
+{
+if(form1.name.value==""||form1.userid.value=="")
+{
+alert("enter your Pnr no")
+return false
+}
+form1.submit()
+}
+function res(form1)
+{
+form1.reset()
+}
+</script>
+</HEAD>
+<body bgColor= #bbe9ff>
+<br>
+<center>
+<table border=0  bgcolor=smokeblue  cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="42%" id="AutoNumber1">
+ <tr>
+    <td width="100%">
+    <p align="center">
+    <img border="2" src="images/forgotpassword.gif" width="303" height="40" align="left"></td>
+  </tr>
+</table>
+<center>
+<form action="newpass.jsp" method=post name=form1>
+<center>
+<table border=0 bgcolor=darkblue width=70%>
+<TR>
+    <TD>&nbsp;</TD>
+</TR>
+<tr><td align=center><b><font size="4" color="#FFFFFF">Enter Your Name :</font></b></td><td>
+  <input type=text name=name size="20"></td></tr><br>
+<tr><td align=center><b><font size="4" color="#FFFFFF">Enter Your Pnr NO :</font></b></td><td>
+  <input type=text name=userid size="20"></td></tr>
+ <TR>
+    <TD>&nbsp;</TD>
+</TR>
+</table>
+</center>
+<br>
+<center>
+    <input type=button onclick="sub()" value=Submit>
+    <input type=button onclick="res()" value=Reset>
+</center>
+    </p>
+</form>
+</BODY></HTML>

@@ -1,0 +1,40 @@
+<DIV style="position:absolute;left:360;top:240;">
+<CENTER>
+<TABLE bgColor=#006498 borderColor=#111111 cellPadding=0 cellSpacing=0 
+style="BORDER-COLLAPSE: collapse" width="95%">
+  <TBODY>
+  <TR>
+    <TD bgColor=skyblue colSpan=3><B><FONT color=#000000>Enter ur Login 
+      Details</FONT></B></TD></TR>
+<TR>
+    <td> &nbsp;</td>
+</tr>
+<TR>
+    
+    <TD align=right><FONT color=white><B>CMC NO : </B></FONT><FONT 
+      color=green></td><td><INPUT name=userid onkeyup=check(form1) size=20></FONT></TD>
+</tr>
+ <TR>
+    <TD align=right><FONT color=white><B>Password : </B></FONT><FONT 
+      color=green></td><td><INPUT name=password type=password></FONT></TD>
+    <TD>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><FONT color=white>&nbsp;</FONT><IMG border=0 height=14 
+      src="new100.gif" width=23><B><FONT color="white"><A 
+      href="register.html">Click Here</A></FONT></B></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>
+      <P><A href="newpass.html"><FONT color=white><B>Forgot 
+      Password?</B></FONT></A></P></TD>
+    <TD align=right>
+     <IMG height=26 onclick=sub(form1)  src="submit.gif" width=102>
+    <IMG height=26 onclick=res(form1)    src="reset.gif"></TD>
+    </TR>
+<TR>
+    <TD>&nbsp;</TD>
+</tr>
+</TBODY></TABLE>

@@ -1,0 +1,100 @@
+create user airlines identified by airlines;
+grant dba to airlines;
+connect airlines/airlines;
+
+create table users(
+userid   varchar(20) primary key,
+password  varchar(20),
+typs	  varchar(1));
+
+create table cosmos(
+userid    	varchar(20) Primary Key ,
+password  	varchar(10) not null,
+fname     	varchar(20), 
+lname     	varchar(20),
+dob	        	date,
+sex 	        	varchar(1),
+education       	varchar(20),
+occupation      	varchar(20),
+nationality      	varchar(20),
+paddress         	varchar(30),
+praddress       	varchar(30),
+state    		varchar(20),
+country  		varchar(20),
+zip     		number(10),
+phone    		number(10),
+mobile   		number(10),
+oinfo    		varchar(60),
+creditcardname   	varchar(20),
+creditcardno    	varchar(15),
+cpassword       	varchar(15),
+pnr     		number(10));
+
+create table airport(
+airid       number(10) primary key,
+placename       varchar(40),
+state	        	varchar(40));
+
+
+create table distance(
+fromairid	 number(10),
+toairid		 number(30),
+nokms		 number(10), 
+primary key( fromairid, toairid));
+
+
+create table flightdatabase(
+flightid	 varchar(10) primary key,
+flightname	 varchar(20),
+category	 varchar(10),
+status		 varchar(1));
+
+create table fschedule(
+flightid   	 varchar(10),
+doj  		 date,
+timein		 number(6,2),
+timeout		 number(6,2),
+fromid		 number(10),
+toid		 number(10),
+eseats		 number(10),
+efare		 number(10),
+bseats		 number(10),
+bfare		 number(10),
+exseats		 number(10),
+exfare		 number(10),
+primary key( flightid,doj));
+
+select  placename from fschedule a, airport b where a.fromid = b.airid
+
+create table seats(
+flightid   	 varchar(10),
+doj  		 date,
+dob		 date,
+doc		 date,
+stype		 varchar(10),
+sno		 varchar(10),
+usid		 varchar(20),
+status		 varchar(1),
+tino		 number(10),
+FID		 NUMBER(10),
+TID		 NUMBER(10),
+primary key( flightid,doj,sno));
+
+
+create table admin_inbox(
+mid number  primary key,
+user_name  varchar2(30),
+msg_from  varchar2(50),
+msg_subject  varchar2(50),
+msg_data  varchar2(1000),
+msg_date  date);
+
+
+
+create table user_inbox(
+mid number primary key,
+user_name varchar2(30),
+msg_from varchar2(50),
+msg_subject varchar2(50),
+msg_data varchar2(500),
+msg_date date);
